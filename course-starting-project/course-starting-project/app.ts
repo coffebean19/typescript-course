@@ -1,17 +1,17 @@
-// const person: {
-//   name: string,
-//   age: number
-// } = {
-enum Role { ADMIN, READ_ONLY_USER, AUTHOR };
+function add(n1: number, n2: number) {
+  return n1 + n2;
+}
 
-const person = {
-  name: "Istvan",
-  age: 24,
-  hobbies: ["Gaming", "Reading"],
-  role: Role.ADMIN
-};
+function printResult(num: number): void {
+  console.log("Result: " + num);
+}
 
-let favActs: string[]; //any[]
-favActs = ["Sports"];
+printResult(add(5, 12));
 
-console.log(person);
+let combine: (a: number, b: number) => number;
+
+combine = add;
+
+console.log(combine(4, 5));
+// combine = printResult;
+
